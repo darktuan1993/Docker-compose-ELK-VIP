@@ -4,7 +4,7 @@ services:
   # ElasticSearch
   elasticsearch:
     container_name: elasticsearch
-    image: elasticsearch:7.17.10
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.10
     environment:
       - ELASTIC_PASSWORD=dangtuan12
       - bootstrap.memory_lock=true
@@ -14,7 +14,7 @@ services:
       - xpack.security.authc.api_key.enabled=true
       - path.data=/usr/share/elasticsearch/data
     volumes:
-      # - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
       - ./elasticsearch/data:/usr/share/elasticsearch/data
     ulimits:
       memlock:
@@ -34,7 +34,7 @@ services:
   # Kibana Service 
   kibana:
     container_name: kibana
-    image: kibana:7.17.10
+    image: docker.elastic.co/kibana/kibana:7.17.10
     ulimits:
       memlock:
         soft: -1
@@ -66,7 +66,7 @@ services:
   # Logstash Service        
   logstash:
     container_name: logstash
-    image: logstash:7.17.10
+    image: docker.elastic.co/logstash/logstash:7.17.10
 
     environment:
       - ELASTICSEARCH_USERNAME=elastic
