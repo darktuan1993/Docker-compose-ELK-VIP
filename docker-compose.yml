@@ -9,7 +9,7 @@ services:
       - ELASTIC_PASSWORD=dangtuan12
       - bootstrap.memory_lock=true
       - discovery.type=single-node
-      - "ES_JAVA_OPTS=-Xms4048m -Xmx4048m"
+      - "ES_JAVA_OPTS=-Xms10048m -Xmx10048m"
       - xpack.security.enabled=true
       - xpack.security.authc.api_key.enabled=true
       - path.data=/usr/share/elasticsearch/data
