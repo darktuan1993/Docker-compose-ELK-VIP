@@ -6,6 +6,7 @@ services:
     container_name: elasticsearch
     image: elasticsearch:7.17.10
     environment:
+      - ELASTIC_PASSWORD=dangtuan12
       - bootstrap.memory_lock=true
       - discovery.type=single-node
       - "ES_JAVA_OPTS=-Xms4048m -Xmx4048m"
