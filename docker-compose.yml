@@ -16,7 +16,7 @@ services:
       - ELASTIC_PASSWORD=dangtuan12
       - bootstrap.memory_lock=true
       - discovery.type=single-node
-      - "ES_JAVA_OPTS=-Xms14048m -Xmx14048m"
+      - "ES_JAVA_OPTS=-Xms13048m -Xmx13048m"
       - xpack.security.enabled=true
       - xpack.security.authc.api_key.enabled=true
       - path.data=/usr/share/elasticsearch/data
@@ -82,7 +82,7 @@ services:
       - ELASTICSEARCH_PASSWORD="dangtuan12"
       - NODE_NAME=my-logstash
       - XPACK_MONITORING_ENABLED=true
-      # - "LS_JAVA_OPTS=-Xms8192m -Xmx8192m"
+      - "LS_JAVA_OPTS=-Xms8192m -Xmx8192m"
     ulimits:
       memlock:
         soft: -1
