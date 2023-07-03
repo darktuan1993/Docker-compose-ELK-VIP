@@ -1,5 +1,5 @@
-cluster.name:    "my-cluster"
-node.name:       "my-name"
+cluster.name:    "elastic-cluster"
+node.name:       "isofh-elasticsearch"
 node.attr.zone:  "my-zone"
 
 node.data: true
