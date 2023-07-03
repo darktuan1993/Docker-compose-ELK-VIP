@@ -82,7 +82,7 @@ services:
       - ELASTICSEARCH_PASSWORD="dangtuan12"
       - NODE_NAME=my-logstash
       - XPACK_MONITORING_ENABLED=true
-      - "LS_JAVA_OPTS=-Xms8192m -Xmx8192m"
+      # - "LS_JAVA_OPTS=-Xms8192m -Xmx8192m"
     ulimits:
       memlock:
         soft: -1
